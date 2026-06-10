@@ -314,29 +314,17 @@ Password: any password
 
 ## 📱 Application Pages
 
-
-
-| Route      | Description       |
-
-| ---------- | ----------------- |
-
-| /          | Landing Page      |
-
-| /login     | User Login        |
-
-| /register  | User Registration |
-
-| /dashboard | User Dashboard    |
-
-| /book      | Ride Booking      |
-
-| /analytics | ML Insights       |
-
-| /history   | Ride History      |
-
-| /wallet    | Wallet Management |
-
-| /profile   | User Settings     |
+```text
+🏠  /            → Landing Page
+🔐  /login       → User Login
+📝  /register    → User Registration
+📊  /dashboard   → Dashboard
+🚖  /book        → Book a Ride
+🤖  /analytics   → ML Analytics
+📜  /history     → Ride History
+💳  /wallet      → Wallet Management
+👤  /profile     → Profile Settings
+```
 
 
 
