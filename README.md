@@ -14,18 +14,6 @@
 
 
 
-![React](https://img.shields.io/badge/React-18-blue?logo=react)
-
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
-
-![Leaflet](https://img.shields.io/badge/Leaflet-Maps-green?logo=leaflet)
-
-![Axios](https://img.shields.io/badge/Axios-API-purple)
-
-![Status](https://img.shields.io/badge/Status-Active-success)
-
-
-
 </div>
 
 
