@@ -533,49 +533,6 @@ Deploy easily on:
 
 
 
-## 👩‍💻 Developer
-
-
-
-**Likitha**
-
-
-
-Cyber Security Enthusiast • Full Stack Developer • UI/UX Explorer
-
-
-
-GitHub: https://github.com/pico-puff
-
-
-
----
-
-
-
-## ⭐ Support
-
-
-
-If you found this project useful:
-
-
-
-⭐ Star the repository
-
-
-
-🍴 Fork the project
-
-
-
-📢 Share it with others
-
-
-
----
-
-
 
 <div align="center">
 
