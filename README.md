@@ -1,188 +1,604 @@
-# 🛺 SwiftRide — AI-Powered Ride Hailing App
+# 🛺 SwiftRide
 
-> *Ride Smart. Arrive Faster.* — Built with React, ML fare prediction, GPay/Paytm integration & full dark/light mode.
+
+
+<div align="center">
+
+
+
+### 🚀 AI-Powered Ride Hailing Platform
+
+
+
+*Ride Smart. Arrive Faster.*
+
+
+
+![React](https://img.shields.io/badge/React-18-blue?logo=react)
+
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
+
+![Leaflet](https://img.shields.io/badge/Leaflet-Maps-green?logo=leaflet)
+
+![Axios](https://img.shields.io/badge/Axios-API-purple)
+
+![Status](https://img.shields.io/badge/Status-Active-success)
+
+
+
+</div>
+
+
 
 ---
 
-## 📁 Project Structure
 
-```
+
+## 🌟 Overview
+
+
+
+SwiftRide is a modern ride-booking web application that combines intelligent fare prediction, secure digital payments, real-time maps, and a beautiful responsive interface.
+
+
+
+The platform simulates a real-world ride-hailing experience with AI-powered analytics, smart ETA estimation, surge pricing, wallet management, and route visualization.
+
+
+
+---
+
+
+
+## ✨ Key Features
+
+
+
+### 🤖 AI & Machine Learning
+
+
+
+* Smart Fare Prediction
+
+* Real-Time ETA Calculation
+
+* Driver Ranking Algorithm
+
+* Dynamic Surge Pricing
+
+* Demand Forecast Analytics
+
+* Cancellation Risk Prediction
+
+
+
+### 🗺️ Interactive Maps
+
+
+
+* Live Route Visualization
+
+* Pickup & Drop Location Markers
+
+* Driver Tracking
+
+* Automatic Route Bounds
+
+* Dark & Light Map Themes
+
+
+
+### 💳 Secure Payments
+
+
+
+* GPay Integration Simulation
+
+* Paytm Integration Simulation
+
+* Payment Recovery Buffer
+
+* Expiring Payment Tokens
+
+* Duplicate Transaction Protection
+
+
+
+### 🌙 Modern UI/UX
+
+
+
+* Full Dark & Light Mode
+
+* Glassmorphism Design
+
+* Responsive Layout
+
+* Smooth Animations
+
+* Mobile Friendly Interface
+
+
+
+---
+
+
+
+## 🛠️ Tech Stack
+
+
+
+### Frontend
+
+
+
+* React.js
+
+* React Router DOM
+
+* Framer Motion
+
+* Axios
+
+
+
+### Maps
+
+
+
+* Leaflet
+
+* React Leaflet
+
+
+
+### State Management
+
+
+
+* Context API
+
+
+
+### Storage
+
+
+
+* Local Storage
+
+
+
+### Authentication
+
+
+
+* Demo Authentication System
+
+
+
+---
+
+
+
+## 📂 Project Structure
+
+
+
+```bash
+
 swiftride/
+
 ├── public/
-│   └── index.html
+
 ├── src/
-│   ├── context/
-│   │   ├── ThemeContext.js      ← Dark/Light mode
-│   │   └── AuthContext.js       ← User login/register
+
 │   ├── components/
-│   │   ├── Navbar.js            ← Navigation + avatar menu
-│   │   ├── RideMap.js           ← Leaflet live map
-│   │   └── ProtectedRoute.js    ← Auth guard
+
 │   ├── pages/
-│   │   ├── Landing.js           ← Hero + features
-│   │   ├── Login.js             ← Sign in
-│   │   ├── Register.js          ← Create account
-│   │   ├── Dashboard.js         ← User home
-│   │   ├── BookRide.js          ← Full booking flow + payment
-│   │   ├── Analytics.js         ← ML insights + charts
-│   │   ├── History.js           ← Ride history
-│   │   ├── Wallet.js            ← Add money + security
-│   │   └── Profile.js           ← User settings
-│   ├── ml/
-│   │   └── mlService.js         ← Fare prediction, ETA, driver ranking
+
+│   ├── context/
+
 │   ├── services/
-│   │   ├── rideService.js       ← Ride lifecycle, history
-│   │   └── paymentService.js    ← Paytm/GPay, tokens, buffer
-│   ├── App.js                   ← Routes
-│   ├── index.js                 ← Entry point
-│   └── index.css                ← Global styles + themes
+
+│   ├── ml/
+
+│   ├── App.js
+
+│   └── index.js
+
 └── package.json
+
 ```
+
+
 
 ---
 
-## ⚡ Quick Start (Recommended: VS Code)
 
-### Step 1 — Install Node.js
-Download from: https://nodejs.org (choose LTS version)
-Verify: open terminal and run `node -v`
 
-### Step 2 — Open the project in VS Code
-1. Open VS Code
-2. File → Open Folder → select `swiftride/`
-3. Open terminal: `Ctrl + `` ` (backtick)
+## 🚀 Getting Started
 
-### Step 3 — Install dependencies
+
+
+### Prerequisites
+
+
+
+Install Node.js (LTS Version)
+
+
+
 ```bash
-npm install
-```
-Wait ~2-3 minutes for packages to install.
 
-### Step 4 — Start the app
+node -v
+
+npm -v
+
+```
+
+
+
+### Installation
+
+
+
+Clone the repository
+
+
+
 ```bash
-npm start
+
+git clone https://github.com/pico-puff/SwiftRide.git
+
 ```
-Browser opens automatically at **http://localhost:3000** 🎉
 
----
 
-## 🖥️ CMD / Command Prompt Setup
 
-```cmd
-# Navigate to project
-cd path\to\swiftride
+Navigate to the project
 
-# Install packages
+
+
+```bash
+
+cd SwiftRide
+
+```
+
+
+
+Install dependencies
+
+
+
+```bash
+
 npm install
 
-# Start development server
-npm start
 ```
 
----
 
-## 🔑 Demo Login
-After app starts, click **Sign In** and use:
-- **Email:** `demo@swiftride.in`
-- **Password:** anything (any text works)
 
----
+Start development server
 
-## ✨ Features
 
-### 🤖 ML / AI Features (mlService.js)
-| Feature | Description |
-|---------|-------------|
-| **Fare Prediction** | Distance × base rate × surge multiplier × demand noise |
-| **ETA Estimation** | Speed model with peak-hour traffic factors |
-| **Driver Ranking** | Composite score: proximity (40%) + rating (35%) + acceptance (25%) |
-| **Surge Detection** | Automatic 1.3–1.7× multiplier during 7–10 AM and 5–9 PM |
-| **Demand Forecast** | Hourly bar chart with ML-predicted demand percentages |
-| **Cancellation Risk** | Probability model based on distance, hour, driver rating |
 
-### 💳 Payment Security (paymentService.js)
-| Feature | Description |
-|---------|-------------|
-| **Token Encryption** | Base64 + reversal token with 10-min expiry |
-| **Payment Buffer** | localStorage backup before payment; recovers on retry |
-| **Duplicate Protection** | Clears buffer only on successful txn confirmation |
-| **GPay / Paytm Sim** | UPI/wallet flow simulation with realistic delay |
-| **95% Success Rate** | 5% simulated failure to test recovery flow |
+```bash
 
-### 🌗 Dark / Light Mode
-- Toggled via sun/moon icon in navbar
-- Persisted in `localStorage`
-- Full purple gradient aesthetic in both modes
-- CSS variables for seamless transition
+npm start
+
+```
+
+
+
+Open:
+
+
+
+```text
+
+http://localhost:3000
+
+```
+
+
 
 ---
 
-## 🗺️ Map Integration
 
-Uses **Leaflet** + **CartoDB tiles** (dark/light auto-switch):
-- Pickup marker (purple dot)
-- Drop marker (green dot)
-- Dashed route polyline
-- Driver markers with emoji icons
-- Auto-fit bounds to show full route
 
-**Note:** Map loads after booking a ride in the `/book` page.
+## 🔐 Demo Credentials
+
+
+
+```text
+
+Email: demo@swiftride.in
+
+Password: any password
+
+```
+
+
+
+---
+
+
+
+## 📱 Application Pages
+
+
+
+| Route      | Description       |
+
+| ---------- | ----------------- |
+
+| /          | Landing Page      |
+
+| /login     | User Login        |
+
+| /register  | User Registration |
+
+| /dashboard | User Dashboard    |
+
+| /book      | Ride Booking      |
+
+| /analytics | ML Insights       |
+
+| /history   | Ride History      |
+
+| /wallet    | Wallet Management |
+
+| /profile   | User Settings     |
+
+
 
 ---
 
-## 🛡️ Security Highlights
 
-1. **No raw passwords stored** — demo auth only (production would use JWT)
-2. **Payment tokens expire** in 10 minutes
-3. **Payment buffer recovery** — if browser crashes during payment, retrying completes the order
-4. **Cancel anytime** — free before driver accepts; ₹15 fee if driver is arriving
-5. **Masked UPI/card** display in UI (e.g., `ar***@upi`)
+
+## 🧠 AI Features
+
+
+
+### Fare Prediction
+
+
+
+Calculates ride cost using:
+
+
+
+* Distance
+
+* Traffic Conditions
+
+* Demand Levels
+
+* Surge Multipliers
+
+
+
+### Driver Ranking
+
+
+
+Drivers are ranked based on:
+
+
+
+* Distance from Rider (40%)
+
+* Driver Rating (35%)
+
+* Acceptance Rate (25%)
+
+
+
+### Surge Pricing
+
+
+
+Automatic fare adjustment during:
+
+
+
+* Morning Rush (7 AM – 10 AM)
+
+* Evening Rush (5 PM – 9 PM)
+
+
 
 ---
+
+
 
 ## 🎨 Design System
 
-- **Fonts:** Syne (display/headings) + DM Sans (body)
-- **Colors:** Purple gradient `#7c3aed` → `#6d28d9`
-- **Dark bg:** `#0d0720` → `#1a0f3d`
-- **Light bg:** `#f8f5ff` → `#ede9fe`
-- **Animations:** fadeUp, pulse-glow, shimmer
-- **Glass morphism:** backdrop-filter blur on cards
+
+
+### Colors
+
+
+
+```css
+
+Primary: #7c3aed
+
+Secondary: #6d28d9
+
+Dark Background: #0d0720
+
+Light Background: #f8f5ff
+
+```
+
+
+
+### Fonts
+
+
+
+* Syne
+
+* DM Sans
+
+
+
+### Effects
+
+
+
+* Glassmorphism
+
+* Gradient Backgrounds
+
+* Smooth Animations
+
+* Theme Persistence
+
+
+
+
+```
+
+
+
+Example:
+
+
+
+```md
+
+![Landing Page](screenshots/landing-page.png)
+
+```
+
+
 
 ---
 
-## 📱 Pages
 
-| Route | Page | Auth Required |
-|-------|------|---------------|
-| `/` | Landing page with hero & features | No |
-| `/login` | Sign in | No |
-| `/register` | Create account | No |
-| `/dashboard` | User home + quick book | ✅ Yes |
-| `/book` | Full ride booking flow | ✅ Yes |
-| `/analytics` | ML insights + demand chart | ✅ Yes |
-| `/history` | Past rides | ✅ Yes |
-| `/wallet` | Add money, payment methods | ✅ Yes |
-| `/profile` | User settings, security | ✅ Yes |
 
----
+## 🏗️ Production Build
 
-## 🚀 Build for Production
+
 
 ```bash
+
 npm run build
+
 ```
-Outputs to `build/` folder — ready to deploy on Netlify, Vercel, or any static host.
+
+
+
+The optimized production files will be generated inside:
+
+
+
+```text
+
+build/
+
+```
+
+
+
+Deploy easily on:
+
+
+
+* Vercel
+
+* Netlify
+
+* GitHub Pages
+
+* Firebase Hosting
+
+
 
 ---
 
-## 💡 Tips
 
-- Use demo login `demo@swiftride.in` to see pre-loaded profile
-- Book a ride end-to-end: Dashboard → Book → Select locations → Choose vehicle → Confirm → Pay
-- Toggle 🌙/☀️ in navbar to switch themes anytime
-- Wallet starts at ₹500; add more via Wallet page
+
+## 🔮 Future Improvements
+
+
+
+* Real GPS Tracking
+
+* Backend API Integration
+
+* Firebase Authentication
+
+* Push Notifications
+
+* Real Payment Gateway Integration
+
+* Driver Mobile App
+
+* Ride Scheduling
+
+
 
 ---
 
-*Built with ❤️ using React, Leaflet, ML fare models & Paytm/GPay payment simulation.*
+
+
+## 👩‍💻 Developer
+
+
+
+**Likitha**
+
+
+
+Cyber Security Enthusiast • Full Stack Developer • UI/UX Explorer
+
+
+
+GitHub: https://github.com/pico-puff
+
+
+
+---
+
+
+
+## ⭐ Support
+
+
+
+If you found this project useful:
+
+
+
+⭐ Star the repository
+
+
+
+🍴 Fork the project
+
+
+
+📢 Share it with others
+
+
+
+---
+
+
+
+<div align="center">
+
+
+
+### 🚖 SwiftRide
+
+
+
+Built with ❤️ using React, Leaflet, Machine Learning Models & Modern Web Technologies.
+
+
+
+</div>
